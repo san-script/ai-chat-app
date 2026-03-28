@@ -1,0 +1,17 @@
+/* Make the text layer fully opaque so marks are visible */
+.pdf-highlight-container .react-pdf__Page__textContent {
+  opacity: 1 !important;
+}
+
+/* Keep actual text invisible — only the PDF canvas text should be readable */
+.pdf-highlight-container .react-pdf__Page__textContent span {
+  color: transparent;
+}
+
+/* Citation highlight: behaves like a physical highlighter on the canvas */
+.pdf-highlight-container .react-pdf__Page__textContent mark {
+  background: rgba(251, 191, 36, 0.55);
+  border-radius: 2px;
+  color: transparent;
+  mix-blend-mode: multiply;
+}
